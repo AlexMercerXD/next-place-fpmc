@@ -381,7 +381,7 @@ class FPMC(object):
     
     
     def sigma(self, x):
-        return 1 / (1 + numpy.exp(-numpy.abs(x)))
+        return 1 / (1 + numpy.exp(-numpy.abs(x)))##I think "numpy.abs()" should not be used here
 
     def x(self, u,l,i):
         return numpy.dot(self.VUI[u], self.VIU[i]) + numpy.dot(self.VIL[i], self.VLI[l])
